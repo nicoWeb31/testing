@@ -11,11 +11,15 @@ const CommentBox = () => {
         setContent('');
     }
 
+    const handleChange =(e)=>{
+        setContent(e.target.value);
+    }
+
 
     return (
         <form onSubmit={handleSubmit}>
             <h4>Add a Comment</h4>
-            <textarea value={content} onChange={e=>setContent(e.target.value)}/>
+            <textarea value={content} onChange={handleChange}/>
             <div className="submit">
                 <button type="submit">
                     submit
