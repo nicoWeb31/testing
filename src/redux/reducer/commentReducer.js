@@ -1,7 +1,7 @@
-import {SAVE_COMMENT } from 'redux/type';
+import {SAVE_COMMENT } from 'redux/type/type.js';
 
 
-exports.commentReducer = (state=[], action) =>{
+export const commentReducer = (state=[], action) =>{
 switch(action.type){
 
     case SAVE_COMMENT:

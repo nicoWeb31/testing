@@ -1,14 +1,19 @@
 import React,{useState} from 'react';
+import { useDispatch } from 'react-redux'
+import * as actions from 'redux/actions';
 
 
 const CommentBox = () => {
 
-    const [content, setContent] = useState('')
+    const [content, setContent] = useState('');
+
+    const dispatch = useDispatch()
 
 
     const handleSubmit =(e)=>{
         e.preventDefault();
         console.log(content);
+        dispatch(actions.saveComment(content));
         setContent('');
     }
 

@@ -1,4 +1,4 @@
-import {SAVE_COMMENT } from 'redux/type';
+import {SAVE_COMMENT } from 'redux/type/type.js';
 
 export const saveComment = (comment) =>{
 
