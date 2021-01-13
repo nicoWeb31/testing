@@ -3,6 +3,6 @@ import { commentReducer } from 'redux/reducer/commentReducer';
 
 
 
-export const reducer =  combineReducers({
+export default  combineReducers({
     comments: commentReducer,
 })
