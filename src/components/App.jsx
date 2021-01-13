@@ -1,6 +1,6 @@
 import React from 'react'
-import CommentBox from './CommentBox'
-import ComponentList from './ComponentList'
+import CommentBox from 'components/CommentBox'
+import ComponentList from 'components/ComponentList'
 
 const App = () => {
     return (

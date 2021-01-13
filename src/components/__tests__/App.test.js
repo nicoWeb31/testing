@@ -1,7 +1,8 @@
 // import { render, screen } from "@testing-library/react";
 import { shallow } from "enzyme";
-import App from "../../components/App";
-import CommentBox from "../../components/CommentBox";
+import App from "components/App";
+import CommentBox from "components/CommentBox";
+import ComponentList from "components/ComponentList";
 // import ReactDOM from "react-dom";
 // import '@testing-library/jest-dom/extend-expect';
 
@@ -27,3 +28,11 @@ test("shows a comment box", () => {
 
     expect(component.find(CommentBox).length).toEqual(1);
 });
+
+
+test("shows a comment list", () => {
+    const component = shallow(<App />)
+
+    expect(component.find(ComponentList).length).toEqual(1);
+
+})
