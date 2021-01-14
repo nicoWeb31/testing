@@ -1,9 +1,9 @@
 import React from "react";
 import { Provider } from "react-redux";
-import store from "redux/store";
+import storeWithState from "redux/store";
 
-const root =  ({children}) => {
-    return <Provider store={store}>{children}</Provider>;
+const root =  ({children, initialState = {}}) => {
+    return <Provider  store={storeWithState(initialState)}>{children}</Provider>;
 };
 
 export default root;
