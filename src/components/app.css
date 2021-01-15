@@ -1,0 +1,22 @@
+.list-nave{
+    
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    
+
+}
+
+.list-nave li{
+    list-style-type: none;
+    margin: 1.5rem;
+}
+
+.auth{
+background-color: rgba(67, 90, 221, 0.15);
+}
+
+.noAuth{
+    background-color: rgba(221, 67, 113, 0.15);
+
+}

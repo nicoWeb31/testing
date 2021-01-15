@@ -1,4 +1,4 @@
-import { SAVE_COMMENT, FETCH_COMMENTS } from "redux/type/type.js";
+import { SAVE_COMMENT, FETCH_COMMENTS, AUTHENTICATION_CHANGE } from "redux/type/type.js";
 import axios from "axios";
 
 export const saveComment = (comment) => {
@@ -11,3 +11,8 @@ export const getComment = () => async (dispatch) => {
     );
     dispatch({ type: FETCH_COMMENTS, payload: data });
 };
+
+
+export const changeAuh = (auth) => {
+    return { type: AUTHENTICATION_CHANGE, payload: auth }
+}
