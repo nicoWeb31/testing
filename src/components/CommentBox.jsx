@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import * as actions from "redux/actions";
+import requireAuth from "components/requireAuth.js";
+
 
 const CommentBox = () => {
     const [content, setContent] = useState("");
 
     const dispatch = useDispatch();
+    // const isAuth = useSelector(state=>state.auth);
+
+    // useEffect(()=>{
+
+    //     if(!isAuth) {
+    //         history.push('/');
+    //     }
+
+    // },[history,isAuth]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -42,4 +53,4 @@ const CommentBox = () => {
     );
 };
 
-export default CommentBox;
+export default requireAuth(CommentBox);
