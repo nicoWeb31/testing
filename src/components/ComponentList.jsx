@@ -19,7 +19,7 @@ const ComponentList = () => {
 
     return (
         <div>
-            <h1> comment List</h1>
+            <h3>Comment List :</h3>
             <ul>
                 {renderComment()}
             </ul>
