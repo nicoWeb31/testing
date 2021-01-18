@@ -15,6 +15,8 @@ export default ({ dispatch }) => (next) => (action) => {
     //if it does  then wait for it to resolve 
     //if it doesn't , then send the action on the mext middleware
 
+    debugger;
+
     if(!action.payload || !action.payload.then) {
         return next(action);
     }
@@ -23,7 +25,7 @@ export default ({ dispatch }) => (next) => (action) => {
     //(get is data !!) and the create a new action with
     //with that data and dispatch it to the middleware
 
-    action.payload.then((response)=>{
+    action.payload.then(function(response){
         const newAction = {...action, payload: response};
         dispatch(newAction);
     })
